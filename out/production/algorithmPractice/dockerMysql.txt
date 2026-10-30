@@ -1,0 +1,31 @@
+docker exec -it mysql-db-aerobics bash
+mysql -u lalo -p
+
+INSERT INTO empleados (
+      nombre,
+      apellido,
+      puesto,
+      email,
+      fecha_contratacion,
+      activo
+  ) VALUES
+  ('Ana', 'Lopez', 'Backend Developer', 'ana.lopez@example.com', '2024-01-15', TRUE),
+  ('Luis', 'Garcia', 'Senior Java Developer', 'luis.garcia@example.com', '2023-08-10',
+  TRUE),
+  ('Maria', 'Perez', 'Tech Lead', 'maria.perez@example.com', '2022-05-20', TRUE);
+
+  Para insertar sueldos usando los IDs generados:
+
+  INSERT INTO sueldos (
+      empleado_id,
+      sueldo_bruto,
+      sueldo_neto,
+      monto,
+      moneda,
+      fecha_inicio,
+      fecha_fin
+  ) VALUES
+  (1, 4500.00, 3500.00, 4500.00, 'EUR', '2024-01-15', NULL),
+  (2, 6200.00, 4800.00, 6200.00, 'EUR', '2023-08-10', NULL),
+  (3, 7500.00, 5700.00, 7500.00, 'EUR', '2022-05-20', NULL);
+

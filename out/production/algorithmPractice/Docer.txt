@@ -1,0 +1,22 @@
+sudo systemctl start docker
+sudo systemctl status docker
+sudo systemctl stop docker
+
+*****Check
+docker images
+docker ps
+docker ps -a
+
+*** Compose
+docker compose up -d
+docker compose ps
+docker compose stop
+docker compose logs -f
+docker compose down
+
+*** File
+docker build -t mi-app .
+docker run -d mi-app
+docker logs -f CONTAINER_ID
+docker stop CONTAINER_ID
+docker rm -f CONTAINER_ID
